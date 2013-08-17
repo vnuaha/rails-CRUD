@@ -1,0 +1,37 @@
+<%= link_to "See all businesses", {:action=>"index", :controller=>"businesses"}, class:'btn' %>
+
+<h3>This is "<%= @business.name %>" in <%= @business.location %>
+
+</h3>
+<p>
+  <strong>Name:</strong>
+  <%= @business.name %>
+</p>
+
+<p>
+    <strong>Type:</strong>
+    <%= @business.type %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @business.email %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @business.location %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @business.phone %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @business.description %>
+</p>
+
+<%= link_to 'Back', businesses_path, class:'btn' %>
+| <%= link_to 'Edit', edit_business_path(@business), class:'btn' %>

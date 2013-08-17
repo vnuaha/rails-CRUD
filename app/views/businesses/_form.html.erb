@@ -1,0 +1,53 @@
+<%= form_for :business, url: businesses_path do |f| %>
+
+<h2>Add a business</h2>
+<%= link_to "Back to all businesses", businesses_path, class: 'btn' %>
+
+<!--if error -->
+<% if @business.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@business.errors.count, "error") %> prohibited
+      this business from being saved:</h2>
+    <ul>
+    <% @business .errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  
+  <br>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  
+ <p>
+    <%= f.label :type %>
+    <%= select_tag(:type, options_for_select(['Eating','Housing','Service','Product']))%>
+ </p>
+ 
+ <p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </p>
+  
+  <p>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </p>
+  
+  <p>
+    <%= f.label :phone %>
+    <%= f.telephone_field :phone %>
+  </p>
+  
+  <p>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.submit 'Add this business', class:'btn btn-success' %>
+  </p>
+<% end %>

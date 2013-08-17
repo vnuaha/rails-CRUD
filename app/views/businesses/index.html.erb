@@ -1,0 +1,50 @@
+<h2>Listing businesses</h2>
+
+<%= link_to "Add a business", new_business_path, class:'btn' %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Email</th>
+    <th>Location</th>
+    <th>Phone</th>
+    <th>Description</th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+ 
+  <% @all_businesses.each do |business| %>
+
+    <tr>
+        <td>
+            <%= business.name %>
+        </td>
+        
+        <td>
+            <%= business.type %>
+        </td>
+        
+        <td>
+            <%= business.email %>
+        </td>
+        
+        <td>
+            <%= business.location %>
+        </td>
+        
+        <td>
+            <%= business.phone %>
+        </td>
+        
+        <td>
+            <%= business.description %>
+        </td>
+        <td><%= link_to 'show', business_path(business), :class=>'btn' %></td>
+        <td><%= link_to 'edit', edit_business_path(business), class: 'btn'%></td>
+        <td><%= link_to 'Destroy', business_path(business),
+                    method: :delete, data: { confirm: 'Are you sure you want to delete this business?' }, class: 'btn' %></td>
+        
+    </tr>
+  <% end %>
+</table>
