@@ -1,7 +1,7 @@
 class BusinessesController < ApplicationController
 
 #basic authentication, applies to every action in controller
-http_basic_authenticate_with :name => "admin", :password => "admin"
+#http_basic_authenticate_with :name => "admin", :password => "admin"
 
 def index
     @all_businesses = Business.all
