@@ -37,11 +37,14 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 # install strong parameters
-gem 'strong_parameters'
+# gem 'strong_parameters'
 
 # Twitter bootstrap
 # thank you https://github.com/seyhunak/twitter-bootstrap-rails
 gem "twitter-bootstrap-rails"
 
-#I don't know what this is (authentication)
+#An easy way to keep your users passwords secure
 gem 'bcrypt-ruby', '~> 3.0.0'
+
+#Protect attributes from mass-assignment in ActiveRecord models, gem in rails 4
+gem 'protected_attributes'
