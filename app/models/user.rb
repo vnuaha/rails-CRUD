@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	#strong_parameters, mass assignment, attr_accessible, attr_protected
 	before_save { self.email = email.downcase }
 	
 	validates :name, presence: true, length: { maximum: 50 }
