@@ -30,4 +30,5 @@ RailsProject::Application.configure do
   
   #for rails4..
   config.eager_load = false
+
 end
