@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  protect_from_forgery with: :exception
+  include SessionsHelper
   
   #This method will fetch the current user from the session.
   private
