@@ -49,3 +49,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 #Protect attributes from mass-assignment in ActiveRecord models, gem in rails 4
 gem 'protected_attributes'
+
+#pagination
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'

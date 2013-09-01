@@ -1,3 +1,5 @@
+<%= render 'layouts/header' %>
+
 <%= link_to "See all businesses", {:action=>"index", :controller=>"businesses"}, class:'btn' %>
 
 <h3>This is "<%= @business.name %>" in <%= @business.location %>
