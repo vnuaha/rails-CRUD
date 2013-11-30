@@ -1,12 +1,22 @@
 source 'https://rubygems.org'
 
-ruby "1.9.3"
+ruby "2.0.0"
 gem 'rails', '4.0.0'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development do
+	gem 'sqlite3'
+	gem 'rspec-rails'
+end
 
-gem 'pg'
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
+end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,13 +1,13 @@
 RailsProject::Application.routes.draw do
-  get "users/new"
-  get "welcome/index"
-
-  root :to => 'welcome#index'
- 
+  get "static_pages/home"
+  get "static_pages/help"
+  get "static_pages/about"
+  resources :microposts
   resources :businesses
   resources :admins
-  
   resources :users
+  
+  root :to => 'welcome#index'
   
   resources :sessions, only: [:new, :create, :destroy]
   #~ root  'static_pages#home'
