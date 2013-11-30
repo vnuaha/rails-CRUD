@@ -34,4 +34,6 @@ RailsProject::Application.configure do
   
   config.secret_token = 'existing secret token'
   config.secret_key_base = 'new secret key base'
+  
+  config.eager_load = false
 end
