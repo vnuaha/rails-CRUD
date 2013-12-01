@@ -55,5 +55,8 @@ module RailsProject
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # make bootstrap-sass compatible with the asset pipeline (http://ruby.railstutorial.org/chapters/filling-in-the-layout#top)
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
