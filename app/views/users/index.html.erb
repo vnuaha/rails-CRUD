@@ -1,7 +1,8 @@
+<% title 'All users' %>
+
 <%= render 'layouts/header' %>
 
-<% provide(:title, 'All users') %>
-<h1>All users</h1>
+<h1><%= yield(:title) %></h1>
 
 <%= will_paginate %>
 
