@@ -55,7 +55,8 @@ gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
 
 #An easy way to keep your users passwords secure
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
+gem 'bootstrap-sass'
 
 #Protect attributes from mass-assignment in ActiveRecord models, gem in rails 4
 gem 'protected_attributes'

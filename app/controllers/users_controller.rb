@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
 	before_action :signed_in_user, only: [:edit, :update]
 	before_action :correct_user,   only: [:edit, :update]
-	  before_action :admin_user,     only: :destroy
-
+	before_action :admin_user,     only: :destroy
+    
+    # User.find_by(email: "mhartl@example.com")
+    
 	def index
 		@users = User.paginate(page: params[:page])
 	end
@@ -26,6 +28,9 @@ class UsersController < ApplicationController
   
 	def update
 		@user = User.find(params[:id])
+		
+		# user.update_attributes(name: "The Dude", email: "dude@abides.org")
+		
 		if @user.update_attributes(user_params)
 			# Handle a successful update.
 			flash[:success] = "Profile updated"

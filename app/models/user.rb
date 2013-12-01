@@ -1,9 +1,12 @@
 class User < ActiveRecord::Base
+	attr_accessor :name, :email
+	
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
 	
 	has_many :microposts
 	
+	# can validate presence, length, format and uniqueness
 	validates :name, presence: true, length: { maximum: 50 }
 	
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
