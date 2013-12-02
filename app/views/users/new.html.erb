@@ -1,4 +1,4 @@
-<% provide(:title, 'Sign up') %>
+<% title 'Sign up') %>
 <h1>Sign up</h1>
 
 <div class="row">
@@ -14,6 +14,12 @@
 
       <%= f.label :password %>
       <%= f.password_field :password %>
+      
+      <%# --comment
+        produces the HTML:
+        <label for="user_password">Password</label><br />
+		<input id="user_password" name="user[password]" type="password" />
+	   --/comment #%>
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>

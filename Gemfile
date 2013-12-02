@@ -11,6 +11,7 @@ end
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
+  gem 'factory_girl_rails'
 end
 
 group :production do
@@ -33,7 +34,7 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -55,7 +56,6 @@ gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
 
 #An easy way to keep your users passwords secure
-gem 'bcrypt-ruby'
 gem 'bootstrap-sass'
 
 #Protect attributes from mass-assignment in ActiveRecord models, gem in rails 4

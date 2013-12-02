@@ -14,7 +14,10 @@ class UsersController < ApplicationController
 	end
   
 	def show
-		@user = User.find(params[:id])
+	    # gravatar: <%= gravatar_for @user %>
+	    #  all we need to do is construct the proper Gravatar image URL using the user’s email address and the corresponding Gravatar image will automatically appear
+	    # @user = User.find(params[:id])
+		@user = User.find(user_params)
 	end
   
 	def edit

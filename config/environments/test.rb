@@ -36,4 +36,7 @@ RailsProject::Application.configure do
   config.secret_key_base = 'new secret key base'
   
   config.eager_load = false
+  
+  # Speed up tests by lowering bcrypt's cost function.
+  ActiveModel::SecurePassword.min_cost = true
 end
